@@ -6,13 +6,10 @@ function computerChoice(){
 }
 
 function myChoice(){
-    index = prompt('Press 1 for rock, 2 for paper and 3 for scissors');
-    if (index == 1)
-        userChoice = 'Rock';
-    else if (index == 2)
-        userChoice = 'Paper';
-    else if (index == 3)
-        userChoice = 'Scissor';
+    userChoice = prompt('Enter rock, paper or scissor');
+    userChoice = userChoice.toLowerCase();
+    userChoice = userChoice.charAt(0).toUpperCase() +userChoice.slice(1);
+    console.log(userChoice);
     return userChoice;
 }
 playerChoice = myChoice();
@@ -44,4 +41,4 @@ function winnerChecker(playerChoice, computerChoice){
     }
 }
 
-winnerChecker(playerChoice, computer);
+//winnerChecker(playerChoice, computer);
